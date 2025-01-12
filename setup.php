@@ -1203,12 +1203,14 @@ if (isset($_POST['add_telemetry'])) {
                             <h3 class="card-title"><i class="fas fa-fw fa-cube mr-2"></i>ITFlow Setup</h3>
                         </div>
                         <div class="card-body">
-                            <h2><b>Thank you</b> for choosing to try ITFlow!</h2>
-                            <p>This is the start of your journey towards amazing client management </p>
+                            <img src="https://wrightwaytech.com/wp-content/uploads/2025/01/logo-for-a-product-called-splash-psa.png" alt="Splash PSA Logo" width="500" height="300" align="center">
+                            <h2>Your<b>journey</b> with Splash PSA begins now!</h2>
+                            <p>If your self hosting welcome and we hope you enjoy this product. We have followed a vision laid out by our team and our community members.<br>First off we want to give credit to the team who created IT Flow without their base we would not be where we are today! </p>
                             <p>A few tips:</p>
                             <ul>
-                                <li>Please take a look over the install <a href="https://docs.itflow.org/installation">docs</a>, if you haven't already</li>
-                                <li>Don't hesitate to reach out on the <a href="https://forum.itflow.org/t/support" target="_blank">forums</a> if you need any assistance</li>
+                                <li>If self hosting please take a look over the install <a href="https://docs.itflow.org/installation">docs</a>, if you haven't already and overview how to <b>backup</b> your installation! </li>
+                                <li>Support is not offered for those that self host unfortunately as we do not have the capacity to do so. However our staff and community members do frequest the discord and help may be found there in some cases.</li>
+                                <li>Please know that we offer no gaurantees to the product or your data and that this application (especially self hosted) is used at your own risk. We merely are trying to offer a solution that is affordable and reliable to the best of our ability. </li>
                                 <li><i>Apache/PHP Error log: <?php echo $errorLog ?></i></li>
                             </ul>
                             <br><p>A database must be created before proceeding - click on the button below to get started.</p>

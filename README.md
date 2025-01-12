@@ -9,14 +9,16 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-  <!-- <a href="https://github.com/itflow-org/itflow">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
+<img src="https://wrightwaytech.com/wp-content/uploads/2025/01/logo-for-a-product-called-splash-psa.png" alt="Splash PSA Logo" width="500" height="300" align="center">
 
-  <h3 align="center">ITFlow</h3>
 
+  <h1 align="center">Splash PSA</h1>
+
+  <h3 align="center">
+    IT Documentation, Ticketing and Accounting System for MSPs with a primary focus on IT Managed Services.
+  </h3>
+</div>
   <p align="center">
-    IT documentation, ticketing and accounting system for small MSPs.
     <br />
     <br />
     <a href="https://demo.itflow.org"><strong>View demo</strong></a>

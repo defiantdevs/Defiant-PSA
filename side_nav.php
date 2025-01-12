@@ -2,10 +2,13 @@
 <aside class="main-sidebar sidebar-dark-<?php echo nullable_htmlentities($config_theme); ?> d-print-none">
 
     <a class="brand-link" href="dashboard.php">
-        <div class="brand-image">
-            <i class="fas fa-building fa-2x"></i>
-        </div>
-        <span class="brand-text h5 ml-2"><?php echo nullable_htmlentities($session_company_name); ?></span>
+      <div class="brand-image">
+    <?php if (!empty($company_logo)) { ?>
+        <img alt="<?=nullable_htmlentities($company_name)?> logo" height="110" width="380" class="img-fluid" src="<?php echo "../uploads/settings/$company_logo"; ?>">
+    <?php } else { ?>
+        Splash<b>PSA</b>
+    <?php } ?>
+</div>
     </a>
 
     <!-- Sidebar -->
@@ -25,10 +28,10 @@
                         <a href="clients.php" class="nav-link <?php if (basename($_SERVER["PHP_SELF"]) == "clients.php") { echo "active"; } ?>">
                             <i class="nav-icon fas fa-users"></i>
                             <p>
-                              Clients
-                              <?php if ($num_active_clients) { ?>
-                                      <span class="right badge text-light"><?php echo $num_active_clients; ?></span>
-                              <?php } ?>
+                                Clients
+                                <?php if ($num_active_clients) { ?>
+                                    <span class="right badge text-light"><?php echo $num_active_clients; ?></span>
+                                <?php } ?>
                             </p>
                         </a>
                     </li>
@@ -104,7 +107,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="recurring_invoices.php" class="nav-link <?php if (basename($_SERVER["PHP_SELF"]) == "recurring_invoices.php" || basename($_SERVER["PHP_SELF"]) == "recurring_invoice.php") { echo "active"; } ?>">
+                        <a href="recurring_invoices.php" class="nav-link <?php if (basename($_SERVER["PHP_SELF"]) == "recurring_invoices.php" || basename($_SERVER["PHP_SELF"]) == "recurring_invoices.php") { echo "active"; } ?>">
                             <i class="nav-icon fas fa-redo-alt"></i>
                             <p>
                                 Recurring Invoices
@@ -193,12 +196,9 @@
                         </a>
                     </li>
                 <?php } ?>
-                
-                <?php
-                $sql_custom_links = mysqli_query($mysqli, "SELECT * FROM custom_links WHERE custom_link_location = 1 AND custom_link_archived_at IS NULL
-                    ORDER BY custom_link_order ASC, custom_link_name ASC"
-                );
 
+                <?php
+                $sql_custom_links = mysqli_query($mysqli, "SELECT * FROM custom_links WHERE custom_link_location = 1 AND custom_link_archived_at IS NULL ORDER BY custom_link_order ASC, custom_link_name ASC");
                 while ($row = mysqli_fetch_array($sql_custom_links)) {
                     $custom_link_name = nullable_htmlentities($row['custom_link_name']);
                     $custom_link_uri = nullable_htmlentities($row['custom_link_uri']);
@@ -209,26 +209,19 @@
                     } else {
                         $target = "";
                     }
-
                     ?>
-
-                <li class="nav-item">
-                    <a href="<?php echo $custom_link_uri; ?>" <?php echo $target; ?> class="nav-link <?php if (basename($_SERVER["PHP_SELF"]) == basename($custom_link_uri)) { echo "active"; } ?>">
-                        <i class="fas fa-<?php echo $custom_link_icon; ?> nav-icon"></i>
-                        <p><?php echo $custom_link_name; ?></p>
-                        <i class="fas fa-angle-right nav-icon float-right"></i>
-                    </a>
-                </li>
-
+                    <li class="nav-item">
+                        <a href="<?php echo $custom_link_uri; ?>" <?php echo $target; ?> class="nav-link <?php if (basename($_SERVER["PHP_SELF"]) == basename($custom_link_uri)) { echo "active"; } ?>">
+                            <i class="fas fa-<?php echo $custom_link_icon; ?> nav-icon"></i>
+                            <p><?php echo $custom_link_name; ?></p>
+                            <i class="fas fa-angle-right nav-icon float-right"></i>
+                        </a>
+                    </li>
                 <?php } ?>
-
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
-
         <div class="mb-3"></div>
-
     </div>
     <!-- /.sidebar -->
-
 </aside>

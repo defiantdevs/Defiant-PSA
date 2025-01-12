@@ -15,7 +15,7 @@ require_once "inc_set_timezone.php";
 
 // Check if the application is configured for HTTPS-only access
 if ($config_https_only && (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') && (!isset($_SERVER['HTTP_X_FORWARDED_PROTO']) || $_SERVER['HTTP_X_FORWARDED_PROTO'] !== 'https')) {
-    echo "Login is restricted as Splash PSA defaults to HTTPS-only for enhanced security. To login using HTTP, modify the config.php file by setting config_https_only to false. However, this is strongly discouraged.";
+    echo "Login is restricted as Defiant PSA defaults to HTTPS-only for enhanced security. To login using HTTP, modify the config.php file by setting config_https_only to false. However, this is strongly discouraged.";
     exit;
 }
 
@@ -120,7 +120,7 @@ if ($config_https_only || !isset($config_https_only)) {
         <?php if (!empty($company_logo)) { ?>
             <img alt="<?=nullable_htmlentities($company_name)?> logo" height="110" width="380" class="img-fluid" src="<?php echo "uploads/settings/$company_logo"; ?>">
         <?php } else { ?>
-            Splash<b>PSA</b>
+            Defiant<b>PSA</b>
         <?php } ?>
     </div>
     <br>

@@ -5,7 +5,7 @@
 
 <!-- PROJECT LOGO -->
 <div align="center">
-<img src="https://wrightwaytech.com/wp-content/uploads/2025/01/defiantpsa-white-blue.png" alt="Defiant PSA Logo" width="1500" height="150" align="center">
+<img src="https://wrightwaytech.com/wp-content/uploads/2025/01/defiantpsa-white-blue.png" alt="Defiant PSA Logo" width="750" height="75" align="center">
 
 
   <h1 align="center">Defiant PSA</h1>

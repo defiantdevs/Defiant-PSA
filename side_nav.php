@@ -2,11 +2,11 @@ IAT<!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-<?php echo nullable_htmlentities($config_theme); ?> d-print-none">
 
     <a class="brand-link" href="dashboard.php">
-     <div class="brand-image">
-    <img alt="<?=nullable_htmlentities($company_name)?> logo" height="150" width="300" class="img-fluid" src="<?php echo !empty($company_logo) ? "./uploads/settings/$company_logo" : "./uploads/settings/wwt-white.png"; ?>">
+     <div class="brand-image" style="padding-bottom: 10px;">
+    <img alt="<?=nullable_htmlentities($company_name)?> logo" height="150" width="300" class="img-fluid" src="<?php echo !empty($company_logo) ? "./uploads/settings/$company_logo" : "./uploads/settings/default_logo.png"; ?>">
 </div>
     </a>
-<br>
+    
     <!-- Sidebar -->
     <div class="sidebar">
 

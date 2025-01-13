@@ -3,10 +3,10 @@ IAT<!-- Main Sidebar Container -->
 
     <a class="brand-link" href="dashboard.php">
      <div class="brand-image">
-    <img alt="<?=nullable_htmlentities($company_name)?> logo" height="150" width="150" class="img-fluid" src="<?php echo !empty($company_logo) ? "./uploads/settings/$company_logo" : "./uploads/settings/wwt-white.png"; ?>">
+    <img alt="<?=nullable_htmlentities($company_name)?> logo" height="150" width="300" class="img-fluid" src="<?php echo !empty($company_logo) ? "./uploads/settings/$company_logo" : "./uploads/settings/wwt-white.png"; ?>">
 </div>
     </a>
-
+<br>
     <!-- Sidebar -->
     <div class="sidebar">
 

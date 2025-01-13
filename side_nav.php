@@ -2,7 +2,7 @@ IAT<!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-<?php echo nullable_htmlentities($config_theme); ?> d-print-none">
 
         <a class="brand-link" href="dashboard.php">
-     <div class="brand-image" style="height: 100%;">
+     <div class="brand-image" style="height: 150px;">
     <img alt="<?=nullable_htmlentities($company_name)?> logo" class="img-fluid" style="max-width: 100%; height: 100%;" src="<?php echo !empty($company_logo) ? "./uploads/settings/$company_logo" : "./uploads/settings/wwt-white.png"; ?>">
 </div>
     </a>

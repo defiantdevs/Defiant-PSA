@@ -1,9 +1,9 @@
 IAT<!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-<?php echo nullable_htmlentities($config_theme); ?> d-print-none">
 
-    <a class="brand-link" href="dashboard.php">
+        <a class="brand-link" href="dashboard.php">
      <div class="brand-image">
-    <img alt="<?=nullable_htmlentities($company_name)?> logo" class="img-fluid" style="max-width: 100%; height: auto;" src="<?php echo !empty($company_logo) ? "./uploads/settings/white-wwt.png"; ?>">
+    <img alt="<?=nullable_htmlentities($company_name)?> logo" height="50" width="150" class="img-fluid" src="<?php echo !empty($company_logo) ? "./uploads/settings/$company_logo" : "./uploads/settings/wwt-white.png"; ?>">
 </div>
     </a>
     

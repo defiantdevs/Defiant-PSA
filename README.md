@@ -17,29 +17,29 @@
   <p align="center">
     <br />
     <br />
-    <a href="https://demo.itflow.org"><strong>View demo</strong></a>
+    <a href="https://demo.defiantpsa.com"><strong>View demo</strong></a>
     <br />
     Username: <b>demo@demo</b> | Password: <b>demo</b>
     <br />
     <br />
-    <a href="https://itflow.org/#about">About</a>
+    <a href="https://defiantpsa.com/about">About</a>
     ·
-    <a href="https://docs.itflow.org">Docs</a>
+    <a href="https://docs.defiantpsa.com">Docs</a>
     ·
-    <a href="https://forum.itflow.org/">Forum</a>
+    <a href="https://defiantpsa.com/discord">Discord</a>
     ·
-    <a href="https://forum.itflow.org/t/bug">Report Bug</a>
+    <a href="https://defiantpsa.com/bug">Report Bug</a>
     ·
-    <a href="https://forum.itflow.org/t/features">Request Feature</a>
+    <a href="https://defiantdev.com/featurerequest">Request Feature</a>
     ·
-    <a href="https://github.com/itflow-org/itflow/security/policy">Security</a>
+    <a href="https://github.com/defiant-psa/itflow/security/policy">Security</a>
   </p>
 </div>
 
 <!-- ABOUT THE PROJECT -->
 ## About
 
-<b>A comprehensive, free & open-source documentation, ticket management, and accounting platform.</b>
+<b>Defiant PSA was designed to fill a void our team felt existed in the MSP space specifically for Managed IT Services. It builds up on an an excellent base and for its beginning phases will be targeted at smaller MSPs although it can definitely support larger MSPs as well.</b>
 
 [![ITFlow][product-screenshot]](https://itflow.org)
 

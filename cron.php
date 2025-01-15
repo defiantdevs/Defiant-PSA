@@ -86,11 +86,9 @@ if ($config_enable_cron == 0) {
     exit("Cron: is not enabled -- Quitting..");
 }
 
+
 // Check Cron Key
-// Check Cron Key
-if ($argv[1] !== $config_cron_key) {
-    echo "Expected Cron Key: " . $config_cron_key . PHP_EOL;
-    echo "Received Cron Key: " . $argv[1] . PHP_EOL;
+if ( $argv[1] !== $config_cron_key ) {
     exit("Cron Key invalid  -- Quitting..");
 }
 

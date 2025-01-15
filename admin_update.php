@@ -85,4 +85,3 @@ $git_log = shell_exec("git log $repo_branch..origin/$repo_branch --pretty=format
 <?php
 
 require_once "footer.php";
-

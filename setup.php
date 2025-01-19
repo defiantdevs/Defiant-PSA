@@ -1200,10 +1200,10 @@ if (isset($_POST['add_telemetry'])) {
 
                     <div class="card card-dark">
                         <div class="card-header">
-                            <h3 class="card-title"><i class="fas fa-fw fa-cube mr-2"></i>ITFlow Setup</h3>
+                            <h3 class="card-title"><i class="fas fa-fw fa-cube mr-2"></i>Defiant PSA Setup</h3>
                         </div>
                         <div class="card-body">
-                            <img src="https://wrightwaytech.com/wp-content/uploads/2025/01/defiantpsa-black-blue.png" alt="Defiant PSA Logo" width="600" height="200" align="center">
+                            <img src="https://wrightwaytech.com/wp-content/uploads/2025/01/defiantpsa-black-blue.png" alt="Defiant PSA Logo" width="600" height="300" align="center">
                             <h2>Your<b> journey</b> with Defiant PSA begins now!</h2>
                             <p>If your self hosting welcome and we hope you enjoy this product. We have followed a vision laid out by our team and our community members.<br>First off we want to give credit to the team who created IT Flow without their base we would not be where we are today! </p>
                             <p>A few tips:</p>

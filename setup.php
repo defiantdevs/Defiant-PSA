@@ -403,79 +403,127 @@ if (isset($_POST['add_telemetry'])) {
 
 }
 
-?> 
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="utf-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        <meta http-equiv="x-ua-compatible" content="ie=edge"> 
-        <title>ITFlow Setup</title>         
-        <!-- Font Awesome Icons -->         
-        <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> 
-        <!-- Theme style -->         
-        <link rel="stylesheet" href="dist/css/adminlte.min.css"> 
-        <!-- Custom Style Sheet -->         
-        <link href="plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css"> 
-        <link href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" rel="stylesheet" type="text/css"> 
-    </head>     
-    <body class="hold-transition sidebar-mini"> 
-        <div class="wrapper text-sm"> 
-            <!-- Navbar -->             
-            <nav class="main-header navbar navbar-expand navbar-primary navbar-dark"> 
-                <!-- Left navbar links -->                 
-                <ul class="navbar-nav"> 
-                    <li class="nav-item"> <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a> 
-                    </li>                     
-                </ul>                 
-                <!-- Right navbar links -->                 
-                <ul class="navbar-nav"> 
-</ul>                 
-            </nav>             
-            <!-- /.navbar -->             
-            <!-- Main Sidebar Container -->             
-            <aside class="elevation-4 main-sidebar sidebar-dark-primary"> 
-                <!-- Brand Logo -->                 <a href="https://itflow.org" class="brand-link">  <h3 class="brand-text font-weight-light">DEFIANT PSA</h3>  </a> 
-                <!-- Sidebar -->                 
-                <div class="sidebar"> 
-                    <!-- Sidebar Menu -->                     
-                    <nav class="mt-2"> 
-                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"> 
-                            <li class="nav-item"> <a href="?checks" class="nav-link <?php if (isset($_GET['checks'])) { echo "active"; } ?>">  <i class="nav-icon fas fa-check"></i>  <p>Checks</p>  </a> 
-                            </li>                             
-                            <li class="nav-item"> <a href="?database" class="nav-link <?php if (isset($_GET['database'])) { echo "active"; } ?>">  <i class="nav-icon fas fa-database"></i>  <p>Database</p>  </a> 
-                            </li>                             
-                            <li class="nav-item"> <a href="?user" class="nav-link <?php if (isset($_GET['user'])) { echo "active"; } ?>">  <i class="nav-icon fas fa-user"></i>  <p>User</p>  </a> 
-                            </li>                             
-                            <li class="nav-item"> <a href="?company" class="nav-link <?php if (isset($_GET['company'])) { echo "active"; } ?>">  <i class="nav-icon fas fa-briefcase"></i>  <p>Company</p>  </a> 
-                            </li>                             
-                            <li class="nav-item"> <a href="?localization" class="nav-link <?php if (isset($_GET['localization'])) { echo "active"; } ?>">  <i class="nav-icon fas fa-globe-americas"></i>  <p>Localization</p>  </a> 
-                            </li>                             
-                            <li class="nav-item"> <a href="?telemetry" class="nav-link <?php if (isset($_GET['telemetry'])) { echo "active"; } ?>">  <i class="nav-icon fas fa-share-alt"></i>  <p>Telemetry</p>  </a> 
-                            </li>                             
-                        </ul>                         
-                    </nav>                     
-                </div>                 
-            </aside>             
-            <!-- Content Wrapper. Contains page content -->             
-            <div class="content-wrapper"> 
-                <!-- Main content -->                 
-                <div class="content mt-3"> 
-                    <div class="container-fluid"> 
-                        <?php
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>ITFlow Setup</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- Custom Style Sheet -->
+    <link href="plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css">
+    <link href="plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+<div class="wrapper text-sm">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-primary navbar-dark">
+
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+            </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav">
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+        <!-- Brand Logo -->
+        <a href="https://itflow.org" class="brand-link">
+            <h3 class="brand-text font-weight-light">ITFlow</h3>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item">
+                        <a href="?checks" class="nav-link <?php if (isset($_GET['checks'])) { echo "active"; } ?>">
+                            <i class="nav-icon fas fa-check"></i>
+                            <p>Checks</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="?database" class="nav-link <?php if (isset($_GET['database'])) { echo "active"; } ?>">
+                            <i class="nav-icon fas fa-database"></i>
+                            <p>Database</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="?user" class="nav-link <?php if (isset($_GET['user'])) { echo "active"; } ?>">
+                            <i class="nav-icon fas fa-user"></i>
+                            <p>User</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="?company" class="nav-link <?php if (isset($_GET['company'])) { echo "active"; } ?>">
+                            <i class="nav-icon fas fa-briefcase"></i>
+                            <p>Company</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="?localization" class="nav-link <?php if (isset($_GET['localization'])) { echo "active"; } ?>">
+                            <i class="nav-icon fas fa-globe-americas"></i>
+                            <p>Localization</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="?telemetry" class="nav-link <?php if (isset($_GET['telemetry'])) { echo "active"; } ?>">
+                            <i class="nav-icon fas fa-share-alt"></i>
+                            <p>Telemetry</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+
+        <!-- Main content -->
+        <div class="content mt-3">
+            <div class="container-fluid">
+
+                <?php
                 //Alert Feedback
                 if (!empty($_SESSION['alert_message'])) {
-                    ?> 
-                            <div class="alert alert-info" id="alert"> 
-                                <?php echo nullable_htmlentities($_SESSION['alert_message']); ?> 
-                                <button class='close' data-dismiss='alert'>&times;</button>                                 
-                            </div>                             
-                        <?php
+                    ?>
+                    <div class="alert alert-info" id="alert">
+                        <?php echo nullable_htmlentities($_SESSION['alert_message']); ?>
+                        <button class='close' data-dismiss='alert'>&times;</button>
+                    </div>
+                    <?php
                     $_SESSION['alert_type'] = '';
                     $_SESSION['alert_message'] = '';
                 }
-                ?> 
-                        <?php if (isset($_GET['checks'])) {
+                ?>
+                
+                <?php if (isset($_GET['checks'])) {
 
                     $checks = [];
 
@@ -657,454 +705,557 @@ if (isset($_POST['add_telemetry'])) {
                         'passed' => $writable,
                         'value' => $webroot,
                     ];
-                    ?> 
-                            <div class="card card-dark mb-3"> 
-                                <div class="card-header"> 
-                                    <h3 class="card-title"><i class="fas fa-fw fa-check mr-2"></i>Setup Checks</h3> 
-                                </div>                                 
-                                <div class="card-body"> 
-                                    <table class="table table-sm table-bordered"> 
-                                        <tbody> 
-                                            <!-- PHP Extensions Section -->                                             
-                                            <tr class="bg-light"> 
-                                                <th colspan="3">PHP Extensions</th> 
-                                            </tr>                                             
-                                            <?php foreach ($phpExtensions as $check): ?> 
-                                                <tr> 
-                                                    <td><?= htmlspecialchars($check['name']); ?></td> 
-                                                    <td style="width: 50px; text-align: center;">  <?php if ($check['passed']): ?>  <i class="fa fa-check" style="color:green"></i>  <?php else: ?>  <i class="fa fa-times" style="color:red"></i>  <?php endif; ?>  </td> 
-                                                    <td><?= htmlspecialchars($check['value']); ?></td> 
-                                                </tr>                                                 
-                                            <?php endforeach; ?> 
-                                            <!-- PHP Configuration Section -->                                             
-                                            <tr class="bg-light"> 
-                                                <th colspan="3">PHP Configuration</th> 
-                                            </tr>                                             
-                                            <?php foreach ($phpConfig as $check): ?> 
-                                                <tr> 
-                                                    <td><?= htmlspecialchars($check['name']); ?></td> 
-                                                    <td style="width: 50px; text-align: center;">  <?php if ($check['passed']): ?>  <i class="fa fa-check" style="color:green"></i>  <?php else: ?>  <i class="fa fa-times" style="color:red"></i>  <?php endif; ?>  </td> 
-                                                    <td><?= htmlspecialchars($check['value']); ?></td> 
-                                                </tr>                                                 
-                                            <?php endforeach; ?> 
-                                            <!-- Shell Commands Section -->                                             
-                                            <tr class="bg-light"> 
-                                                <th colspan="3">Shell Commands</th> 
-                                            </tr>                                             
-                                            <?php foreach ($shellCommands as $check): ?> 
-                                                <tr> 
-                                                    <td><?= htmlspecialchars($check['name']); ?></td> 
-                                                    <td style="width: 50px; text-align: center;">  <?php if ($check['passed']): ?>  <i class="fa fa-check" style="color:green"></i>  <?php else: ?>  <i class="fa fa-times" style="color:red"></i>  <?php endif; ?>  </td> 
-                                                    <td><?= htmlspecialchars($check['value']); ?></td> 
-                                                </tr>                                                 
-                                            <?php endforeach; ?> 
-                                            <!-- SSL Checks Section -->                                             
-                                            <tr class="bg-light"> 
-                                                <th colspan="3">SSL Checks</th> 
-                                            </tr>                                             
-                                            <?php foreach ($sslChecks as $check): ?> 
-                                                <tr> 
-                                                    <td><?= htmlspecialchars($check['name']); ?></td> 
-                                                    <td style="width: 50px; text-align: center;">  <?php if ($check['passed']): ?>  <i class="fa fa-check" style="color:green"></i>  <?php else: ?>  <i class="fa fa-times" style="color:red"></i>  <?php endif; ?>  </td> 
-                                                    <td><?= htmlspecialchars($check['value']); ?></td> 
-                                                </tr>                                                 
-                                            <?php endforeach; ?> 
-                                            <!-- Domain Checks Section -->                                             
-                                            <tr class="bg-light"> 
-                                                <th colspan="3">Domain Checks</th> 
-                                            </tr>                                             
-                                            <?php foreach ($domainChecks as $check): ?> 
-                                                <tr> 
-                                                    <td><?= htmlspecialchars($check['name']); ?></td> 
-                                                    <td style="width: 50px; text-align: center;">  <?php if ($check['passed']): ?>  <i class="fa fa-check" style="color:green"></i>  <?php else: ?>  <i class="fa fa-times" style="color:red"></i>  <?php endif; ?>  </td> 
-                                                    <td><?= htmlspecialchars($check['value']); ?></td> 
-                                                </tr>                                                 
-                                            <?php endforeach; ?> 
-                                            <!-- File Permissions Section -->                                             
-                                            <tr class="bg-light"> 
-                                                <th colspan="3">File Permissions</th> 
-                                            </tr>                                             
-                                            <?php foreach ($filePermissions as $check): ?> 
-                                                <tr> 
-                                                    <td><?= htmlspecialchars($check['name']); ?></td> 
-                                                    <td style="width: 50px; text-align: center;">  <?php if ($check['passed']): ?>  <i class="fa fa-check" style="color:green"></i>  <?php else: ?>  <i class="fa fa-times" style="color:red"></i>  <?php endif; ?>  </td> 
-                                                    <td><?= htmlspecialchars($check['value']); ?></td> 
-                                                </tr>                                                 
-                                            <?php endforeach; ?> 
-                                        </tbody>                                         
-                                    </table>                                     
-                                    <hr> <a href="?database" class="btn btn-primary text-bold">Next (Database)<i class="fa fa-fw fa-arrow-circle-right ml-2"></i></a> 
-                                </div>                                 
-                            </div>                             
-                            <?php } elseif (isset($_GET['database'])) { ?> 
-                            <div class="card card-dark"> 
-                                <div class="card-header"> 
-                                    <h3 class="card-title"><i class="fas fa-fw fa-database mr-2"></i>Connect your Database</h3> 
-                                </div>                                 
-                                <div class="card-body"> 
-                                    <?php if (file_exists('config.php')) { ?> 
-                                        Database is already configured. Any further changes should be made by editing the config.php file,
-                                        or deleting it and refreshing this page.
-                                        <?php } else { ?> 
-                                        <form method="post" autocomplete="off"> 
-                                            <h5>Database Connection Details</h5> 
-                                            <div class="form-group"> 
-                                                <label>Database Name <strong class="text-danger">*</strong>
-                                                </label>                                                 
-                                                <div class="input-group"> 
-                                                    <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-database"></i></span> 
-                                                    </div>                                                     
-                                                    <input type="text" class="form-control" name="database" placeholder="Database name" autofocus required> 
-                                                </div>                                                 
-                                            </div>                                             
-                                            <div class="form-group"> 
-                                                <label>Database Host <strong class="text-danger">*</strong>
-                                                </label>                                                 
-                                                <div class="input-group"> 
-                                                    <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-server"></i></span> 
-                                                    </div>                                                     
-                                                    <input type="text" class="form-control" name="host" value="localhost" placeholder="Database Host" required> 
-                                                </div>                                                 
-                                            </div>                                             <br> 
-                                            <h5>Database Authentication Details</h5> 
-                                            <div class="form-group"> 
-                                                <label>Database User <strong class="text-danger">*</strong>
-                                                </label>                                                 
-                                                <div class="input-group"> 
-                                                    <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-user"></i></span> 
-                                                    </div>                                                     
-                                                    <input type="text" class="form-control" name="username" placeholder="Database user account" required> 
-                                                </div>                                                 
-                                            </div>                                             
-                                            <div class="form-group"> 
-                                                <label>Database Password <strong class="text-danger">*</strong>
-                                                </label>                                                 
-                                                <div class="input-group"> 
-                                                    <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-lock"></i></span> 
-                                                    </div>                                                     
-                                                    <input type="password" class="form-control" data-toggle="password" name="password" placeholder="Database user password" autocomplete="new-password" required> 
-                                                    <div class="input-group-append"> <span class="input-group-text"><i class="fa fa-fw fa-eye"></i></span> 
-                                                    </div>                                                     
-                                                </div>                                                 
-                                            </div>                                             
-                                            <hr> 
-                                            <button type="submit" name="add_database" class="btn btn-primary text-bold"> 
-                                                Next (First User)<i class="fas fa-fw fa-arrow-circle-right ml-2"></i> 
-                                            </button>                                             
-                                        </form>                                         
-                                    <?php } ?> 
-                                </div>                                 
-                            </div>                             
-                            <?php } elseif (isset($_GET['user'])) { ?> 
-                            <div class="card card-dark"> 
-                                <div class="card-header"> 
-                                    <h3 class="card-title"><i class="fas fa-fw fa-user mr-2"></i>Create your first user</h3> 
-                                </div>                                 
-                                <div class="card-body"> 
-                                    <form method="post" enctype="multipart/form-data" autocomplete="off"> 
-                                        <div class="form-group"> 
-                                            <label>Name <strong class="text-danger">*</strong>
-                                            </label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-user"></i></span> 
-                                                </div>                                                 
-                                                <input type="text" class="form-control" name="name" placeholder="Full Name" autofocus required> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Email <strong class="text-danger">*</strong>
-                                            </label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-envelope"></i></span> 
-                                                </div>                                                 
-                                                <input type="email" class="form-control" name="email" placeholder="Email Address" required> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Password <strong class="text-danger">*</strong>
-                                            </label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-lock"></i></span> 
-                                                </div>                                                 
-                                                <input type="password" class="form-control" data-toggle="password" name="password" placeholder="Enter a Password" autocomplete="new-password" required minlength="8"> 
-                                                <div class="input-group-append"> <span class="input-group-text"><i class="fa fa-fw fa-eye"></i></span> 
-                                                </div>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Avatar</label>                                             
-                                            <input type="file" class="form-control-file" accept="image/*;capture=camera" name="file"> 
-                                        </div>                                         
-                                        <hr> 
-                                        <button type="submit" name="add_user" class="btn btn-primary text-bold">Next (Company details) <i class="fa fa-fw fa-arrow-circle-right"></i>
-                                        </button>                                         
-                                    </form>                                     
-                                </div>                                 
-                            </div>                             
-                            <?php } elseif (isset($_GET['company'])) { ?> 
-                            <div class="card card-dark"> 
-                                <div class="card-header"> 
-                                    <h3 class="card-title"><i class="fas fa-fw fa-briefcase mr-2"></i>Company Details</h3> 
-                                </div>                                 
-                                <div class="card-body"> 
-                                    <form method="post" enctype="multipart/form-data" autocomplete="off"> 
-                                        <div class="form-group"> 
-                                            <label>Company Name <strong class="text-danger">*</strong>
-                                            </label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-building"></i></span> 
-                                                </div>                                                 
-                                                <input type="text" class="form-control" name="name" placeholder="Company Name" autofocus required> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Logo</label>                                             
-                                            <input type="file" class="form-control-file" name="file" accept=".jpg, .jpeg, .png"> 
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Address</label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-map-marker-alt"></i></span> 
-                                                </div>                                                 
-                                                <input type="text" class="form-control" name="address" placeholder="Street Address"> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>City</label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-city"></i></span> 
-                                                </div>                                                 
-                                                <input type="text" class="form-control" name="city" placeholder="City"> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>State / Province</label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-flag"></i></span> 
-                                                </div>                                                 
-                                                <input type="text" class="form-control" name="state" placeholder="State or Province"> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Postal Code</label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fab fa-fw fa-usps"></i></span> 
-                                                </div>                                                 
-                                                <input type="text" class="form-control" name="zip" placeholder="Zip or Postal Code"> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Country <strong class="text-danger">*</strong>
-                                            </label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-globe-americas"></i></span> 
-                                                </div>                                                 
-                                                <select class="form-control select2" name="country" required> 
-                                                    <option value="">- Country -</option>                                                     
-                                                    <?php foreach($countries_array as $country_name) { ?> 
-                                                        <option>
-                                                            <?php echo $country_name; ?>
-                                                        </option>                                                         
-                                                    <?php } ?> 
-                                                </select>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Phone</label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-phone"></i></span> 
-                                                </div>                                                 
-                                                <input type="text" class="form-control" name="phone" placeholder="Phone Number"> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Email</label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-envelope"></i></span> 
-                                                </div>                                                 
-                                                <input type="email" class="form-control" name="email" placeholder="Email address"> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Website</label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-globe"></i></span> 
-                                                </div>                                                 
-                                                <input type="text" class="form-control" name="website" placeholder="Website address"> 
-                                            </div>                                             
-                                        </div>                                         
-                                        <hr> 
-                                        <button type="submit" name="add_company_settings" class="btn btn-primary text-bold"> 
-                                            Next (Localization)<i class="fas fa-fw fa-arrow-circle-right ml-2"></i> 
-                                        </button>                                         
-                                    </form>                                     
-                                </div>                                 
-                            </div>                             
-                            <?php } elseif (isset($_GET['localization'])) { ?> 
-                            <div class="card card-dark"> 
-                                <div class="card-header"> 
-                                    <h3 class="card-title"><i class="fas fa-fw fa-globe-americas mr-2"></i>Region and Language</h3> 
-                                </div>                                 
-                                <div class="card-body"> 
-                                    <form method="post" autocomplete="off"> 
-                                        <div class="form-group"> 
-                                            <label>Language <strong class="text-danger">*</strong>
-                                            </label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-language"></i></span> 
-                                                </div>                                                 
-                                                <select class="form-control select2" name="locale" required> 
-                                                    <option value="">- Select a Language -</option>                                                     
-                                                    <?php foreach($locales_array as $locale_code => $locale_name) { ?> 
-                                                        <option value="<?php echo $locale_code; ?>">
-                                                            <?php echo $locale_name; ?>
-                                                        </option>                                                         
-                                                    <?php } ?> 
-                                                </select>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Currency <strong class="text-danger">*</strong>
-                                            </label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-money-bill"></i></span> 
-                                                </div>                                                 
-                                                <select class="form-control select2" name="currency_code" required> 
-                                                    <option value="">- Select a Currency -</option>                                                     
-                                                    <?php foreach($currencies_array as $currency_code => $currency_name) { ?> 
-                                                        <option value="<?php echo $currency_code; ?>">
-                                                            <?php echo "$currency_code - $currency_name"; ?>
-                                                        </option>                                                         
-                                                    <?php } ?> 
-                                                </select>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Timezone <strong class="text-danger">*</strong>
-                                            </label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-fw fa-business-time"></i></span> 
-                                                </div>                                                 
-                                                <select class="form-control select2" name="timezone" required> 
-                                                    <option value="">- Select a Timezone -</option>                                                     
-                                                    <?php foreach ($timezones as $tz) { ?> 
-                                                        <option value="<?php echo $tz; ?>">
-                                                            <?php echo $tz; ?>
-                                                        </option>                                                         
-                                                    <?php } ?> 
-                                                </select>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <div class="form-group"> 
-                                            <label>Phone Mask</label>                                             
-                                            <div class="input-group"> 
-                                                <div class="input-group-prepend"> <span class="input-group-text"><i class="fa fa-phone"></i></span> 
-                                                </div>                                                 
-                                                <select class="form-control select2" name="phone_mask"> 
-                                                    <option value="1">US Format - e.g. (412) 888-9999</option>                                                     
-                                                    <option value="0">Non-US Format - e.g. 4128889999</option>                                                     
-                                                </select>                                                 
-                                            </div>                                             
-                                        </div>                                         
-                                        <hr> 
-                                        <button type="submit" name="add_localization_settings" class="btn btn-primary text-bold"> 
-                                            Next (Telemetry Settings)<i class="fas fa-fw fa-arrow-circle-right ml-2"></i> 
-                                        </button>                                         
-                                    </form>                                     
-                                </div>                                 
-                            </div>                             
-                            <?php } elseif (isset($_GET['telemetry'])) { ?> 
-                            <div class="card card-dark"> 
-                                <div class="card-header"> 
-                                    <h3 class="card-title"><i class="fas fa-fw fa-broadcast-tower mr-2"></i>Telemetry</h3> 
-                                </div>                                 
-                                <div class="card-body"> 
-                                    <form method="post" autocomplete="off"> 
-                                        <h5>Would you like to share some data with us?</h5> 
-                                        <hr> 
-                                        <div class="form-check"> 
-                                            <input type="checkbox" class="form-check-input" name="share_data" value="1"> 
-                                            <label class="form-check-label ml-2">Share <small class="form-text"><a href="https://docs.itflow.org/telemetry" target="_blank">Click Here for additional details regarding the information we gather <i class="fas fa-external-link-alt"></i></a></small>
-                                            </label>                                             
-                                        </div>                                         <br> 
-                                        <div class="form-group"> 
-                                            <label>Comments</label>                                             
-                                            <textarea class="form-control" rows="4" name="comments" placeholder="Any Comments?"></textarea> 
-                                        </div>                                         
-                                        <hr> 
-                                        <h5>Post installation steps: </h5> 
-                                        <p>A few <a href="https://docs.itflow.org/installation#post-installation_essential_housekeeping">housekeeping steps</a> are required to ensure everything runs smoothly, namely:</p> 
-                                        <ul> 
-                                            <li>
-                                                <a href="https://docs.itflow.org/backups">Setup backups</a>
-                                            </li>                                             
-                                            <li>
-                                                <a href="https://docs.itflow.org/cron">Setup cron</a> *If Installing via script cron jobs will be automatically setup for you.
-                                            </li>                                             
-                                            <li>Star ITFlow on <a href="https://github.com/itflow-org/itflow">Github</a> :)
-                                            </li>                                             
-                                        </ul>                                         
-                                        <hr> 
-                                        <button type="submit" name="add_telemetry" class="btn btn-primary text-bold"> 
-                                            Finish and Sign in<i class="fas fa-fw fa-check-circle ml-2"></i> 
-                                        </button>                                         
-                                    </form>                                     
-                                </div>                                 
-                            </div>                             
-                            <?php } else { ?> 
-                            <div class="card card-dark"> 
-                                <div class="card-header"> 
-                                    <h3 class="card-title"><i class="fas fa-fw fa-cube mr-2"></i>Defiant PSA Setup</h3> 
-                                </div>                                 
-                                <div class="card-body"> 
-                                    <img src="https://wrightwaytech.com/wp-content/uploads/2025/01/defiantpsa-black-blue.png" alt="Defiant PSA Logo" width="450" height="50" align="center"> 
-                                    <h2>Your<b> journey</b> with Defiant PSA begins now!</h2> 
-                                    <p>If your self hosting welcome and we hope you enjoy this product. We have followed a vision laid out by our team and our community members.<br>First off we want to give credit to the team who created IT Flow without their base we would not be where we are today! </p> 
-                                    <p>A few tips:</p> 
-                                    <ul> 
-                                        <li>If self hosting please take a look over the install <a href="https://docs.itflow.org/installation">docs</a>, if you haven't already and overview how to <b>backup</b> your installation! 
-                                        </li>                                         
-                                        <li>Support is not offered for those that self host unfortunately as we do not have the capacity to do so. However our staff and community members do frequest the discord and help may be found there in some cases.</li>                                         
-                                        <li>Please know that we offer no gaurantees to the product or your data and that this application (especially self hosted) is used at your own risk. We merely are trying to offer a solution that is affordable and reliable to the best of our ability. </li>                                         
-                                        <li>
-                                            <i>Apache/PHP Error log: <?php echo $errorLog ?></i>
-                                        </li>                                         
-                                    </ul>                                     <br>
-                                    <p>A database must be created before proceeding - click on the button below to get started.</p> <br>
-                                    <hr> 
-                                    <p class="text-muted">ITFlow is <b>free software</b>: you can redistribute and/or modify it under the terms of the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU General Public License</a>. <br> It is distributed in the hope that it will be useful, but <b>without any warranty</b>; without even the implied warranty of merchantability or fitness for a particular purpose.</p> 
-                                    <?php
+                    ?>
+
+                    <div class="card card-dark mb-3">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-fw fa-check mr-2"></i>Setup Checks</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-sm table-bordered">
+                                <tbody>
+                                    <!-- PHP Extensions Section -->
+                                    <tr class="bg-light">
+                                        <th colspan="3">PHP Extensions</th>
+                                    </tr>
+                                    <?php foreach ($phpExtensions as $check): ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($check['name']); ?></td>
+                                            <td style="width: 50px; text-align: center;">
+                                                <?php if ($check['passed']): ?>
+                                                    <i class="fa fa-check" style="color:green"></i>
+                                                <?php else: ?>
+                                                    <i class="fa fa-times" style="color:red"></i>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td><?= htmlspecialchars($check['value']); ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+
+                                    <!-- PHP Configuration Section -->
+                                    <tr class="bg-light">
+                                        <th colspan="3">PHP Configuration</th>
+                                    </tr>
+                                    <?php foreach ($phpConfig as $check): ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($check['name']); ?></td>
+                                            <td style="width: 50px; text-align: center;">
+                                                <?php if ($check['passed']): ?>
+                                                    <i class="fa fa-check" style="color:green"></i>
+                                                <?php else: ?>
+                                                    <i class="fa fa-times" style="color:red"></i>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td><?= htmlspecialchars($check['value']); ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+
+                                    <!-- Shell Commands Section -->
+                                    <tr class="bg-light">
+                                        <th colspan="3">Shell Commands</th>
+                                    </tr>
+                                    <?php foreach ($shellCommands as $check): ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($check['name']); ?></td>
+                                            <td style="width: 50px; text-align: center;">
+                                                <?php if ($check['passed']): ?>
+                                                    <i class="fa fa-check" style="color:green"></i>
+                                                <?php else: ?>
+                                                    <i class="fa fa-times" style="color:red"></i>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td><?= htmlspecialchars($check['value']); ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+
+                                    <!-- SSL Checks Section -->
+                                    <tr class="bg-light">
+                                        <th colspan="3">SSL Checks</th>
+                                    </tr>
+                                    <?php foreach ($sslChecks as $check): ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($check['name']); ?></td>
+                                            <td style="width: 50px; text-align: center;">
+                                                <?php if ($check['passed']): ?>
+                                                    <i class="fa fa-check" style="color:green"></i>
+                                                <?php else: ?>
+                                                    <i class="fa fa-times" style="color:red"></i>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td><?= htmlspecialchars($check['value']); ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+
+                                    <!-- Domain Checks Section -->
+                                    <tr class="bg-light">
+                                        <th colspan="3">Domain Checks</th>
+                                    </tr>
+                                    <?php foreach ($domainChecks as $check): ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($check['name']); ?></td>
+                                            <td style="width: 50px; text-align: center;">
+                                                <?php if ($check['passed']): ?>
+                                                    <i class="fa fa-check" style="color:green"></i>
+                                                <?php else: ?>
+                                                    <i class="fa fa-times" style="color:red"></i>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td><?= htmlspecialchars($check['value']); ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+
+                                    <!-- File Permissions Section -->
+                                    <tr class="bg-light">
+                                        <th colspan="3">File Permissions</th>
+                                    </tr>
+                                    <?php foreach ($filePermissions as $check): ?>
+                                        <tr>
+                                            <td><?= htmlspecialchars($check['name']); ?></td>
+                                            <td style="width: 50px; text-align: center;">
+                                                <?php if ($check['passed']): ?>
+                                                    <i class="fa fa-check" style="color:green"></i>
+                                                <?php else: ?>
+                                                    <i class="fa fa-times" style="color:red"></i>
+                                                <?php endif; ?>
+                                            </td>
+                                            <td><?= htmlspecialchars($check['value']); ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                            
+                            <hr>
+
+                            <a href="?database" class="btn btn-primary text-bold">Next (Database)<i class="fa fa-fw fa-arrow-circle-right ml-2"></i></a>
+                        </div>
+                    </div>
+
+                <?php } elseif (isset($_GET['database'])) { ?>
+
+                    <div class="card card-dark">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-fw fa-database mr-2"></i>Connect your Database</h3>
+                        </div>
+                        <div class="card-body">
+                            <?php if (file_exists('config.php')) { ?>
+                                Database is already configured. Any further changes should be made by editing the config.php file,
+                                or deleting it and refreshing this page.
+                            <?php } else { ?>
+                                <form method="post" autocomplete="off">
+
+                                    <h5>Database Connection Details</h5>
+
+                                    <div class="form-group">
+                                        <label>Database Name <strong class="text-danger">*</strong></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fa fa-fw fa-database"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" name="database" placeholder="Database name" autofocus required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Database Host <strong class="text-danger">*</strong></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fa fa-fw fa-server"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" name="host" value="localhost" placeholder="Database Host" required>
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <h5>Database Authentication Details</h5>
+
+                                    <div class="form-group">
+                                        <label>Database User <strong class="text-danger">*</strong></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fa fa-fw fa-user"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" name="username" placeholder="Database user account" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Database Password <strong class="text-danger">*</strong></label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fa fa-fw fa-lock"></i></span>
+                                            </div>
+                                            <input type="password" class="form-control" data-toggle="password" name="password" placeholder="Database user password" autocomplete="new-password" required>
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><i class="fa fa-fw fa-eye"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <button type="submit" name="add_database" class="btn btn-primary text-bold">
+                                        Next (First User)<i class="fas fa-fw fa-arrow-circle-right ml-2"></i>
+                                    </button>
+                                </form>
+                            <?php } ?>
+                        </div>
+                    </div>
+
+                <?php } elseif (isset($_GET['user'])) { ?>
+
+                    <div class="card card-dark">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-fw fa-user mr-2"></i>Create your first user</h3>
+                        </div>
+                        <div class="card-body">
+
+                            <form method="post" enctype="multipart/form-data" autocomplete="off">
+                                <div class="form-group">
+                                    <label>Name <strong class="text-danger">*</strong></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-user"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="name" placeholder="Full Name" autofocus required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email <strong class="text-danger">*</strong></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Password <strong class="text-danger">*</strong></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-lock"></i></span>
+                                        </div>
+                                        <input type="password" class="form-control" data-toggle="password" name="password" placeholder="Enter a Password" autocomplete="new-password" required minlength="8">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-eye"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Avatar</label>
+                                    <input type="file" class="form-control-file" accept="image/*;capture=camera" name="file">
+                                </div>
+
+                                <hr>
+
+                                <button type="submit" name="add_user" class="btn btn-primary text-bold">Next (Company details) <i class="fa fa-fw fa-arrow-circle-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                <?php } elseif (isset($_GET['company'])) { ?>
+
+                    <div class="card card-dark">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-fw fa-briefcase mr-2"></i>Company Details</h3>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" enctype="multipart/form-data" autocomplete="off">
+
+                                <div class="form-group">
+                                    <label>Company Name <strong class="text-danger">*</strong></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-building"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="name" placeholder="Company Name" autofocus required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Logo</label>
+                                    <input type="file" class="form-control-file" name="file" accept=".jpg, .jpeg, .png">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-map-marker-alt"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="address" placeholder="Street Address">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-city"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="city" placeholder="City">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>State / Province</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-flag"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="state" placeholder="State or Province">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Postal Code</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fab fa-fw fa-usps"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="zip" placeholder="Zip or Postal Code">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Country <strong class="text-danger">*</strong></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-globe-americas"></i></span>
+                                        </div>
+                                        <select class="form-control select2" name="country" required>
+                                            <option value="">- Country -</option>
+                                            <?php foreach($countries_array as $country_name) { ?>
+                                                <option><?php echo $country_name; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-phone"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="phone" placeholder="Phone Number">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" class="form-control" name="email" placeholder="Email address">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Website</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-globe"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" name="website" placeholder="Website address">
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <button type="submit" name="add_company_settings" class="btn btn-primary text-bold">
+                                    Next (Localization)<i class="fas fa-fw fa-arrow-circle-right ml-2"></i>
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                <?php } elseif (isset($_GET['localization'])) { ?>
+
+                    <div class="card card-dark">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-fw fa-globe-americas mr-2"></i>Region and Language</h3>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" autocomplete="off">
+
+                                <div class="form-group">
+                                    <label>Language <strong class="text-danger">*</strong></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-language"></i></span>
+                                        </div>
+                                        <select class="form-control select2" name="locale" required>
+                                            <option value="">- Select a Language -</option>
+                                            <?php foreach($locales_array as $locale_code => $locale_name) { ?>
+                                                <option value="<?php echo $locale_code; ?>"><?php echo $locale_name; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Currency <strong class="text-danger">*</strong></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-money-bill"></i></span>
+                                        </div>
+                                        <select class="form-control select2" name="currency_code" required>
+                                            <option value="">- Select a Currency -</option>
+                                            <?php foreach($currencies_array as $currency_code => $currency_name) { ?>
+                                                <option value="<?php echo $currency_code; ?>"><?php echo "$currency_code - $currency_name"; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Timezone <strong class="text-danger">*</strong></label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-fw fa-business-time"></i></span>
+                                        </div>
+                                        <select class="form-control select2" name="timezone" required>
+                                            <option value="">- Select a Timezone -</option>
+                                            <?php foreach ($timezones as $tz) { ?>
+                                                <option value="<?php echo $tz; ?>"><?php echo $tz; ?></option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Phone Mask</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                                        </div>
+                                        <select class="form-control select2" name="phone_mask">
+                                            <option value="1">US Format - e.g. (412) 888-9999</option>
+                                            <option value="0">Non-US Format - e.g. 4128889999</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <button type="submit" name="add_localization_settings" class="btn btn-primary text-bold">
+                                    Next (Telemetry Settings)<i class="fas fa-fw fa-arrow-circle-right ml-2"></i>
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+
+
+                <?php } elseif (isset($_GET['telemetry'])) { ?>
+
+                    <div class="card card-dark">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-fw fa-broadcast-tower mr-2"></i>Telemetry</h3>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" autocomplete="off">
+                                <h5>Would you like to share some data with us?</h5>
+
+                                <hr>
+
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" name="share_data" value="1">
+                                    <label class="form-check-label ml-2">Share <small class="form-text"><a href="https://docs.itflow.org/telemetry" target="_blank">Click Here for additional details regarding the information we gather <i class="fas fa-external-link-alt"></i></a></small></label>
+                                </div>
+
+                                <br>
+
+                                <div class="form-group">
+                                    <label>Comments</label>
+                                    <textarea class="form-control" rows="4" name="comments" placeholder="Any Comments?"></textarea>
+                                </div>
+
+                                <hr>
+
+                                <h5>Post installation steps: </h5>
+                                <p>A few <a href="https://docs.itflow.org/installation#post-installation_essential_housekeeping">housekeeping steps</a> are required to ensure everything runs smoothly, namely:</p>
+                                <ul>
+                                    <li><a href="https://docs.itflow.org/backups">Setup backups</a></li>
+                                    <li><a href="https://docs.itflow.org/cron">Setup cron</a> *If Installing via script cron jobs will be automatically setup for you.</li>
+                                    <li>Star ITFlow on <a href="https://github.com/itflow-org/itflow">Github</a> :)</li>
+                                </ul>
+
+                                <hr>
+
+                                <button type="submit" name="add_telemetry" class="btn btn-primary text-bold">
+                                    Finish and Sign in<i class="fas fa-fw fa-check-circle ml-2"></i>
+                                </button>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                <?php } else { ?>
+
+                    <div class="card card-dark">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-fw fa-cube mr-2"></i>Defiant PSA Setup</h3>
+                        </div>
+                        <div class="card-body">
+                            <img src="https://wrightwaytech.com/wp-content/uploads/2025/01/defiantpsa-black-blue.png" alt="Defiant PSA Logo" width="450" height="90" align="center">
+                            <h2>Your<b> journey</b> with Defiant PSA begins now!</h2>
+                            <p>If your self hosting welcome and we hope you enjoy this product. We have followed a vision laid out by our team and our community members.<br>First off we want to give credit to the team who created IT Flow without their base we would not be where we are today! </p>
+                            <p>A few tips:</p>
+                            <ul>
+                                <li>If self hosting please take a look over the install <a href="https://docs.itflow.org/installation">docs</a>, if you haven't already and overview how to <b>backup</b> your installation! </li>
+                                <li>Support is not offered for those that self host unfortunately as we do not have the capacity to do so. However our staff and community members do frequest the discord and help may be found there in some cases.</li>
+                                <li>Please know that we offer no gaurantees to the product or your data and that this application (especially self hosted) is used at your own risk. We merely are trying to offer a solution that is affordable and reliable to the best of our ability. </li>
+                                <li><i>Apache/PHP Error log: <?php echo $errorLog ?></i></li>
+                            </ul>
+                            <br><p>A database must be created before proceeding - click on the button below to get started.</p>
+                            <br><hr>
+                            <p class="text-muted">ITFlow is <b>free software</b>: you can redistribute and/or modify it under the terms of the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU General Public License</a>. <br> It is distributed in the hope that it will be useful, but <b>without any warranty</b>; without even the implied warranty of merchantability or fitness for a particular purpose.</p>
+                            <?php
                             // Check that there is access to write to the current directory
                             if (!is_writable('.')) {
                                 echo "<div class='alert alert-danger'>Warning: The current directory is not writable. Ensure the webserver process has write access (chmod/chown). Check the <a href='https://docs.itflow.org/installation#ubuntu_setup_guide'>docs</a> for info.</div>";
                             }
-                            ?> 
-                                    <hr> 
-                                    <div style="text-align: center;"> <a href="?checks" class="btn btn-primary text-bold"> 
-                                    Begin Setup<i class="fas fa-fw fa-arrow-alt-circle-right ml-2"></i>  </a> 
-                                    </div>                                     
-                                </div>                                 
-                            </div>                             
-                        <?php } ?> 
+                            ?>
+                            <hr>
+                            <div style="text-align: center;">
+                                <a href="?checks" class="btn btn-primary text-bold">
+                                    Begin Setup<i class="fas fa-fw fa-arrow-alt-circle-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /.container-fluid -->                     
-                </div>                 
-                <!-- /.content -->                 
-            </div>             
-            <!-- /.content-wrapper -->             
-        </div>         
-        <!-- ./wrapper -->         
-        <!-- REQUIRED SCRIPTS -->         
-        <!-- jQuery -->         
-        <script src="plugins/jquery/jquery.min.js"></script>         
-        <!-- Bootstrap 4 -->         
-        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>         
-        <!-- Custom js-->         
-        <script src='plugins/select2/js/select2.min.js'></script>         
-        <script src="plugins/Show-Hide-Passwords-Bootstrap-4/bootstrap-show-password.min.js"></script>         
-        <!-- AdminLTE App -->         
-        <script src="dist/js/adminlte.min.js"></script>         
-        <!-- Custom js-->         
-        <script src="js/app.js"></script>         
-    </body>     
+
+                <?php } ?>
+
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Custom js-->
+<script src='plugins/select2/js/select2.min.js'></script>
+<script src="plugins/Show-Hide-Passwords-Bootstrap-4/bootstrap-show-password.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+
+<!-- Custom js-->
+<script src="js/app.js"></script>
+
+</body>
+
 </html>

@@ -87,66 +87,55 @@ if ($config_https_only || !isset($config_https_only)) {
     ini_set("session.cookie_secure", true);
 }
 
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php echo nullable_htmlentities($company_name); ?> | Login</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-
-    <!--
+?> 
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <title>
+            <?php echo nullable_htmlentities($company_name); ?> | Login
+        </title>         
+        <!-- Tell the browser to be responsive to screen width -->         
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <meta name="robots" content="noindex"> 
+        <!-- Font Awesome -->         
+        <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> 
+        <!--
     Favicon
     If Fav Icon exists else use the default one
-    -->
-    <?php if(file_exists('uploads/favicon.ico')) { ?>
-        <link rel="icon" type="image/x-icon" href="/uploads/favicon.ico">
-    <?php } ?>
-
-    <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/adminlte.min.css">
-
-</head>
-<body class="hold-transition login-page">
-
-<div class="login-box">
-    <div class="login-logo">
-        <?php if (!empty($company_logo)) { ?>
-            <img alt="<?=nullable_htmlentities($company_name)?> logo" height="110" width="380" class="img-fluid" src="<?php echo "uploads/settings/$company_logo"; ?>">
-        <?php } else { ?>
-            Defiant<b>PSA</b>
-        <?php } ?>
-    </div>
-    <br>
-    <br>
-    <div class="card">
-        <div class="card-body login-card-body">
-            <?php if(!empty($config_login_message)){ ?>
-            <p class="login-box-msg px-0"><?php echo nl2br($config_login_message); ?></p>
-            <?php } ?>
-            <div class="text-center mb-3">
-                <a href="portal/login.php" class="btn btn-primary btn-block">Client Login</a>
-                <a href="loginagent.php" class="btn btn-secondary btn-block">Help Desk Login</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /.login-box -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-
-</body>
+    -->         
+        <?php if(file_exists('uploads/favicon.ico')) { ?> 
+            <link rel="icon" type="image/x-icon" href="/uploads/favicon.ico"> 
+        <?php } ?> 
+        <!-- Theme style -->         
+        <link rel="stylesheet" href="dist/css/adminlte.min.css"> 
+    </head>     
+    <body class="hold-transition login-page"> 
+        <div class="login-box"> 
+            <div class="login-logo"> 
+                <?php if (!empty($company_logo)) { ?> 
+                    <img alt="<?=nullable_htmlentities($company_name)?> logo" height="110" width="380" class="img-fluid" src="<?php echo "uploads/settings/$company_logo"; ?>"> 
+                    <?php } else { ?> 
+                    Defiant<b>PSA</b> 
+                <?php } ?> 
+            </div>             <br> <br> 
+            <div class="card"> 
+                <div class="card-body login-card-body"> 
+                    <?php if(!empty($config_login_message)){ ?> 
+                        <p class="login-box-msg px-0"><?php echo nl2br($config_login_message); ?></p> 
+                    <?php } ?> 
+                    <div class="text-center mb-3"> <a href="portal/login.php" class="btn btn-primary btn-block">Client Login</a> <a href="loginagent.php" class="btn btn-secondary btn-block">Help Desk Login</a> 
+                    </div>                     
+                </div>                 
+            </div>             
+        </div>         
+        <!-- /.login-box -->         
+        <!-- jQuery -->         
+        <script src="plugins/jquery/jquery.min.js"></script>         
+        <!-- Bootstrap 4 -->         
+        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>         
+        <!-- AdminLTE App -->         
+        <script src="dist/js/adminlte.min.js"></script>         
+    </body>     
 </html>

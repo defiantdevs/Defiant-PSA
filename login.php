@@ -132,7 +132,7 @@ if ($config_https_only || !isset($config_https_only)) {
             <?php } ?>
             <div class="text-center mb-3">
                 <a href="portal/login.php" class="btn btn-primary btn-block">Client Login</a>
-                <a href="loginagent.php" class="btn btn-secondary btn-block">Help Desk Login</a>
+                <a href="loginagent.php" class="btn btn-secondary btn-block">Agent Login</a>
             </div>
         </div>
     </div>
